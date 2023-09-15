@@ -1,0 +1,30 @@
+
+<%- include('partials/header') %>
+
+
+<div class="form-section">
+  <main class="form-page">
+
+    
+   
+      <form action="/auth/signin" method="post">
+        <h3>Sign In To Book Preview Hub</h3>
+        
+        <div>
+          <input type="text" placeholder="Email" name="email">
+        </div>
+        <div>
+          <input type="text" placeholder="Password" name="password">
+        </div>
+      
+        <button type="submit">Next</button>
+        <div>Don't Have An Account? <a href="/auth/signup">Create Your Account</a></div>
+      </form>
+      
+
+  </main>
+
+</div>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<div class="main-section">
+  <main class="main-page">
+    <h2><%= author %></h2>
+    <%authorInfoFiltered.forEach((detail, index) => {%>
+    <section id="author-section" class="book-section">
+      <div>
+        <img id="unsplash-image" src=<%=
+        `https://source.unsplash.com/random?book=${index}` %> alt="" />
+      </div>
+
+      <div class="author-book-details">
+        <h3><%= detail.title %></h3>
+        <p><%= detail.description.substring(0, 500) %>...</p>
+        <span
+          ><a href="<%= detail.previewLink %>"
+            >Read More On Google Books</a
+          ></span
+        >
+      </div>
+    </section>
+    <% })%>
+  </main>
+</div>
+
+<%- include('partials/footer') %>

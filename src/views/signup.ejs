@@ -1,0 +1,30 @@
+
+<%- include('partials/header') %>
+
+
+<div class="form-section">
+  <main class="form-page">
+
+    
+<form action="/auth/signup" method="post">
+  <h3>Create Your Account</h3>
+  <div>
+    <input type="text" placeholder="Username" name="username">
+  </div>
+  <div>
+    <input type="text" placeholder="Email" name="email">
+  </div>
+  <div>
+    <input type="text" placeholder="Password" name="password">
+  </div>
+
+  <button type="submit">Next</button>
+  <div>Already Have An Account? <a href="/auth/signin">Sign In To Your Account</a></div>
+
+</form>
+  </main>
+
+</div>
+
+
+<%- include('partials/footer') %>

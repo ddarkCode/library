@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<div class="main-section">
+   
+  <main class="main-page">
+    <h2>Authors</h2>
+   
+    <% authors.forEach((author, index) => { %>
+    <section class="book-section">
+      <div class="book-image-container">
+        <img src="<%=`https://source.unsplash.com/random?author=${author.name}` %>" alt="">
+      </div>
+
+      <div class="short-book-details">
+        <h3 id="author-name"><%= author.name %></h3>
+        <span id="author-info"><a href="/authors/<%= author.name %>">Read More About <%= author.name %></a></span>
+      </div>
+    </section>
+    <%}) %>
+    
+  </main>
+ 
+</div>
+
+<%- include('partials/footer') %>
